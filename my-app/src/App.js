@@ -23,6 +23,8 @@ import TodoList from './components/TodoList/TodoList';
 import initialTodos from './components/TodoList/todos.json';
 import TodoEditor from './components/TodoEditor/TodoEditor';
 import Filter from './components/Filter';
+import { ProductReviewForm } from './components/ProductReviewForm';
+
 // import Form from './components/Form';
 // const colorPickerOptions = [
 // //   { label: 'red', color: '#F44336' },
@@ -119,9 +121,10 @@ class App extends Component {
 
     return (
       <>
-        <p>Total:{todos.length}</p>
+        <ProductReviewForm />
+        {/* <p>Total:{todos.length}</p>
         <p>Done:{completedTodos}</p>
-        <TodoEditor onSubmit={this.addTodo} />
+        <TodoEditor onSubmit={this.addTodo} /> */}
         {/* <Form onSubmit={this.formSubmitHandler} /> */}
         {/* <input
           type="text"
@@ -143,12 +146,12 @@ class App extends Component {
           ]}
         /> */}
 
-        <Filter value={filter} onChange={this.changeFilter} />
+        {/* <Filter value={filter} onChange={this.changeFilter} />
         <TodoList
           todos={visibleTodos}
           onDeleteTodo={this.deleteTodo}
           onToggleCompleted={this.toggleCompleted}
-        />
+        /> */}
       </>
     );
   }
